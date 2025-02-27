@@ -1,3 +1,3 @@
-# portafolio
+# JUEGO DEL AMIGO SECRETO
 2  
-3  <a href="https://github.com/Mcacereshernandez/My-project.git">Visualiza mi repositorio</a><
+3  <a href="https://mcacereshernandez.github.io/juego-amigo-secreto/">Visualiza mi repositorio para el juego del amigo secreto</a><
