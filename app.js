@@ -7,13 +7,15 @@ let mejoresAmigos = [];
 //Función para agregar mejores amigos
 function agregarAmigo() {
     let amigos = document.getElementById("amigo").value.trim();
-    if (amigos !== "") {
+    // Colocaré doble condición para evitar ingresos vacios o duplicados
+    if (mejoresAmigos.includes(amigos) && amigos !== "") {
         mejoresAmigos.push(amigos);
         console.log(mejoresAmigos);
         document.getElementById("amigo").value = ""; // esto para limpiar el especio
+    } else if (amigos === "") {
+        alert("Por favor, ingresa el nombre de un amigo antes de agregar");
     } else {
-        alert("Por favor, ingresa un nombre válido antes de agregar")
-    }    
-
+        alert(`El amigo llamado ${amigos} ya fue ingresado a la lista, por favor ingresa otro amigo`);
+    }
 }
 agregarAmigo()
