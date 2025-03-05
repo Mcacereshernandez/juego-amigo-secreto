@@ -7,9 +7,13 @@ let mejoresAmigos = [];
 //Función para agregar mejores amigos
 function agregarAmigo() {
     let amigos = document.getElementById("amigo").value.trim();
-    mejoresAmigos.push(amigos);
-    console.log(mejoresAmigos);
-    document.getElementById("amigo").value = ""; // Limpiar el campo de texto
-    return;
+    if (amigos !== "") {
+        mejoresAmigos.push(amigos);
+        console.log(mejoresAmigos);
+        document.getElementById("amigo").value = ""; // esto para limpiar el especio
+    } else {
+        alert("Por favor, ingresa un nombre válido antes de agregar")
+    }    
+
 }
 agregarAmigo()
