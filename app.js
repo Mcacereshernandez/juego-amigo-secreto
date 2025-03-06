@@ -20,13 +20,13 @@ function agregarAmigo() {
 
 
         //recorrer el listado e ir agregando los elementos a la lista
-
         for (let i = 0; i< mejoresAmigos.length; i++) {
             //Creaación del li dentro del HTML
             let li = document.createElement("li");
-            li.textContent = amigos;
+            li.textContent = mejoresAmigos[i];
             lista.appendChild(li);
-        }    
+        }
+
         document.getElementById("amigo").value = ""; // esto lo usaré para limpiar el espacio después de escribir el nombre
     } else if (amigos === "") {
         alert("Por favor, ingresa el nombre de un amigo antes de agregar");
