@@ -10,16 +10,23 @@ function agregarAmigo() {
     let amigos = document.getElementById("amigo").value.trim();
     //Variable par conectar con listaAmigos de HTML
     let lista = document.querySelector("#listaAmigos"); 
+
+    lista.innerHTML = ""; //Limpiar la lista para agregar nuevos elementos
+
     // Colocaré doble condición para evitar ingresos vacios o duplicados
     if (!mejoresAmigos.includes(amigos) && amigos !== "") {
         mejoresAmigos.push(amigos);
         console.log(mejoresAmigos);
 
-        //Creaación del li dentro del HTML
-        let li = document.createElement("li");
-        li.textContent = amigos;
-        lista.appendChild(li);
 
+        //recorrer el listado e ir agregando los elementos a la lista
+
+        for (let i = 0; i< mejoresAmigos.length; i++) {
+            //Creaación del li dentro del HTML
+            let li = document.createElement("li");
+            li.textContent = amigos;
+            lista.appendChild(li);
+        }    
         document.getElementById("amigo").value = ""; // esto lo usaré para limpiar el espacio después de escribir el nombre
     } else if (amigos === "") {
         alert("Por favor, ingresa el nombre de un amigo antes de agregar");
