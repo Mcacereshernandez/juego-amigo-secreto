@@ -35,3 +35,14 @@ function agregarAmigo() {
         document.getElementById("amigo").value = ""; // nuevamente esto lo usaré para limpiar el espacio después de escribir el nombre
     }
 }
+
+//Crearé una funcionalidad para generar aleatoridad y sortear a los amigos de la lista para elegir un ganador
+
+function sortearAmigo() {
+    let resultado = document.getElementById("resultado");
+    if (mejoresAmigos === 0) {
+        resultado.innerHTML = "No hay amigos disponibles en el listado para realizar el sorteo";
+        return;
+    }
+}
+
