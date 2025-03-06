@@ -9,7 +9,7 @@ function agregarAmigo() {
     //Variable para conectar amigos con el HTML
     let amigos = document.getElementById("amigo").value.trim();
     //Variable par conectar con listaAmigos de HTML
-    let lista = querySelector("#listaamigos"); 
+    let lista = querySelector("#listaAmigos"); 
     // Colocaré doble condición para evitar ingresos vacios o duplicados
     if (!mejoresAmigos.includes(amigos) && amigos !== "") {
         mejoresAmigos.push(amigos);
