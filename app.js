@@ -9,7 +9,7 @@ function agregarAmigo() {
     //Variable para conectar amigos con el HTML
     let amigos = document.getElementById("amigo").value.trim();
     //Variable par conectar con listaAmigos de HTML
-    let lista = querySelector("#listaAmigos"); 
+    let lista = document.querySelector("#listaAmigos"); 
     // Colocaré doble condición para evitar ingresos vacios o duplicados
     if (!mejoresAmigos.includes(amigos) && amigos !== "") {
         mejoresAmigos.push(amigos);
@@ -27,14 +27,4 @@ function agregarAmigo() {
         alert(`El amigo llamado ${amigos} ya fue ingresado a la lista, por favor ingresa otro amigo`);
         document.getElementById("amigo").value = ""; // nuevamente esto lo usaré para limpiar el espacio después de escribir el nombre
     }
-}
-agregarAmigo()
-
-
-//Función para mostrar el listado de amigos agregados en la pantalla de visualización
-
-function asignarTextoElemento (elemento, texto) {
-    let elementoHTML = document.querySelector(elemento);
-    elementoHTML.innerHTML = texto;
-    return;
 }
