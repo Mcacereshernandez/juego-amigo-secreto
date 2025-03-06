@@ -44,5 +44,10 @@ function sortearAmigo() {
         resultado.innerHTML = "No hay amigos disponibles en el listado para realizar el sorteo";
         return;
     }
+
+    let calculoDeAleatoreidad = Math.floor(Math.random() * mejoresAmigos.length);
+    let amigoSorteado = mejoresAmigos [calculoDeAleatoreidad];
+    resultado.innerHTML = `El amigo sorteado es: ${amigoSorteado}`;
 }
+
 
