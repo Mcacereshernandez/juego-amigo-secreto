@@ -40,7 +40,7 @@ function agregarAmigo() {
 
 function sortearAmigo() {
     let resultado = document.getElementById("resultado");
-    if (mejoresAmigos === 0) {
+    if (mejoresAmigos.length === 0) {
         resultado.innerHTML = "No hay amigos disponibles en el listado para realizar el sorteo";
         return;
     }
@@ -49,5 +49,4 @@ function sortearAmigo() {
     let amigoSorteado = mejoresAmigos [calculoDeAleatoreidad];
     resultado.innerHTML = `El amigo sorteado es: ${amigoSorteado}`;
 }
-
 
